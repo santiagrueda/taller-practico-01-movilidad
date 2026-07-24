@@ -1,0 +1,1682 @@
+[
+  {
+    "request_id": "W0001",
+    "timestamp": "2025-03-17T14:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 26.2,
+      "condition": "Lluvia",
+      "humidity_pct": 46
+    }
+  },
+  {
+    "request_id": "W0002",
+    "timestamp": "2025-03-18T05:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": 26.0,
+      "condition": "Lluvia",
+      "humidity_pct": 44
+    }
+  },
+  {
+    "request_id": "W0003",
+    "timestamp": "2025-03-09T18:00:00",
+    "location": {
+      "sensor_id": "SEN01",
+      "lat": 6.2308,
+      "lon": -75.5906
+    },
+    "weather": {
+      "temp_c": 24.1,
+      "condition": "Soleado",
+      "humidity_pct": 70
+    }
+  },
+  {
+    "request_id": "W0004",
+    "timestamp": "2025-03-04T09:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 23.1,
+      "condition": "Soleado",
+      "humidity_pct": 89
+    }
+  },
+  {
+    "request_id": "W0005",
+    "timestamp": "2025-03-02T03:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 21.4,
+      "condition": "Soleado",
+      "humidity_pct": 58
+    }
+  },
+  {
+    "request_id": "W0006",
+    "timestamp": "2025-03-10T13:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 15.1,
+      "condition": "Nublado",
+      "humidity_pct": 49
+    }
+  },
+  {
+    "request_id": "W0007",
+    "timestamp": "2025-03-12T13:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 24.4,
+      "condition": "Nublado",
+      "humidity_pct": 77
+    }
+  },
+  {
+    "request_id": "W0008",
+    "timestamp": "2025-03-13T14:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 20.5,
+      "condition": "Nublado",
+      "humidity_pct": 44
+    }
+  },
+  {
+    "request_id": "W0009",
+    "timestamp": "2025-03-07T13:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 20.4,
+      "condition": "Soleado",
+      "humidity_pct": 80
+    }
+  },
+  {
+    "request_id": "W0010",
+    "timestamp": "2025-03-09T13:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": 20.0,
+      "condition": "Lluvia",
+      "humidity_pct": 83
+    }
+  },
+  {
+    "request_id": "W0011",
+    "timestamp": "2025-03-16T22:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": 28.7,
+      "condition": "Lluvia",
+      "humidity_pct": 61
+    }
+  },
+  {
+    "request_id": "W0012",
+    "timestamp": "2025-03-04T03:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 21.5,
+      "condition": "Lluvia",
+      "humidity_pct": 70
+    }
+  },
+  {
+    "request_id": "W0013",
+    "timestamp": "2025-03-07T02:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 23.2,
+      "condition": "Soleado",
+      "humidity_pct": 48
+    }
+  },
+  {
+    "request_id": "W0014",
+    "timestamp": "2025-03-06T23:00:00",
+    "location": {
+      "sensor_id": "SEN04",
+      "lat": 6.2865,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 24.4,
+      "condition": "Nublado",
+      "humidity_pct": 86
+    }
+  },
+  {
+    "request_id": "W0015",
+    "timestamp": "2025-03-03T08:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 26.6,
+      "condition": "Nublado",
+      "humidity_pct": 51
+    }
+  },
+  {
+    "request_id": "W0016",
+    "timestamp": "2025-03-04T03:00:00",
+    "location": {
+      "sensor_id": "SEN05",
+      "lat": 6.247,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 20.4,
+      "condition": "Lluvia",
+      "humidity_pct": 41
+    }
+  },
+  {
+    "request_id": "W0017",
+    "timestamp": "2025-03-06T06:00:00",
+    "location": {
+      "sensor_id": "SEN04",
+      "lat": 6.2865,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 25.1,
+      "condition": "Lluvia",
+      "humidity_pct": 88
+    }
+  },
+  {
+    "request_id": "W0018",
+    "timestamp": "2025-03-19T21:00:00",
+    "location": {
+      "sensor_id": "SEN04",
+      "lat": 6.2865,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 22.9,
+      "condition": "Soleado",
+      "humidity_pct": 54
+    }
+  },
+  {
+    "request_id": "W0019",
+    "timestamp": "2025-03-12T03:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": 28.8,
+      "condition": "Soleado",
+      "humidity_pct": 68
+    }
+  },
+  {
+    "request_id": "W0020",
+    "timestamp": "2025-03-20T05:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 18.7,
+      "condition": "Lluvia",
+      "humidity_pct": 67
+    }
+  },
+  {
+    "request_id": "W0021",
+    "timestamp": "2025-03-14T03:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 26.1,
+      "condition": "Nublado",
+      "humidity_pct": 40
+    }
+  },
+  {
+    "request_id": "W0022",
+    "timestamp": "2025-03-02T02:00:00",
+    "location": {
+      "sensor_id": "SEN01",
+      "lat": 6.2308,
+      "lon": -75.5906
+    },
+    "weather": {
+      "temp_c": 20.9,
+      "condition": "Lluvia",
+      "humidity_pct": 87
+    }
+  },
+  {
+    "request_id": "W0023",
+    "timestamp": "2025-03-17T10:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": 24.5,
+      "condition": "Soleado",
+      "humidity_pct": 43
+    }
+  },
+  {
+    "request_id": "W0024",
+    "timestamp": "2025-03-09T11:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 24.4,
+      "condition": "Soleado",
+      "humidity_pct": 89
+    }
+  },
+  {
+    "request_id": "W0025",
+    "timestamp": "2025-03-10T15:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 28.0,
+      "condition": "Lluvia",
+      "humidity_pct": 84
+    }
+  },
+  {
+    "request_id": "W0026",
+    "timestamp": "2025-03-13T12:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 18.3,
+      "condition": "Soleado",
+      "humidity_pct": 56
+    }
+  },
+  {
+    "request_id": "W0027",
+    "timestamp": "2025-03-01T07:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 26.0,
+      "condition": "Nublado",
+      "humidity_pct": 80
+    }
+  },
+  {
+    "request_id": "W0028",
+    "timestamp": "2025-03-09T12:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 22.2,
+      "condition": "Soleado",
+      "humidity_pct": 50
+    }
+  },
+  {
+    "request_id": "W0029",
+    "timestamp": "2025-03-09T11:00:00",
+    "location": {
+      "sensor_id": "SEN01",
+      "lat": 6.2308,
+      "lon": -75.5906
+    },
+    "weather": {
+      "temp_c": 25.1,
+      "condition": "Soleado",
+      "humidity_pct": 79
+    }
+  },
+  {
+    "request_id": "W0030",
+    "timestamp": "2025-03-12T19:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 23.1,
+      "condition": "Nublado",
+      "humidity_pct": 64
+    }
+  },
+  {
+    "request_id": "W0031",
+    "timestamp": "2025-03-13T17:00:00",
+    "location": {
+      "sensor_id": "SEN05",
+      "lat": 6.247,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 23.4,
+      "condition": "Soleado",
+      "humidity_pct": 82
+    }
+  },
+  {
+    "request_id": "W0032",
+    "timestamp": "2025-03-04T20:00:00",
+    "location": {
+      "sensor_id": "SEN01",
+      "lat": 6.2308,
+      "lon": -75.5906
+    },
+    "weather": {
+      "temp_c": 22.2,
+      "condition": "Soleado",
+      "humidity_pct": 51
+    }
+  },
+  {
+    "request_id": "W0033",
+    "timestamp": "2025-03-18T01:00:00",
+    "location": {
+      "sensor_id": "SEN01",
+      "lat": 6.2308,
+      "lon": -75.5906
+    },
+    "weather": {
+      "temp_c": 21.8,
+      "condition": "Lluvia",
+      "humidity_pct": 50
+    }
+  },
+  {
+    "request_id": "W0034",
+    "timestamp": "2025-03-08T19:00:00",
+    "location": {
+      "sensor_id": "SEN01",
+      "lat": 6.2308,
+      "lon": -75.5906
+    },
+    "weather": {
+      "temp_c": 18.4,
+      "condition": "Nublado",
+      "humidity_pct": 57
+    }
+  },
+  {
+    "request_id": "W0035",
+    "timestamp": "2025-03-17T12:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": 22.5,
+      "condition": "Nublado",
+      "humidity_pct": 82
+    }
+  },
+  {
+    "request_id": "W0036",
+    "timestamp": "2025-03-12T03:00:00",
+    "location": {
+      "sensor_id": "SEN01",
+      "lat": 6.2308,
+      "lon": -75.5906
+    },
+    "weather": {
+      "temp_c": 20.8,
+      "condition": "Lluvia",
+      "humidity_pct": 75
+    }
+  },
+  {
+    "request_id": "W0037",
+    "timestamp": "2025-03-10T18:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 28.3,
+      "condition": "Soleado",
+      "humidity_pct": 87
+    }
+  },
+  {
+    "request_id": "W0038",
+    "timestamp": "2025-03-14T09:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 24.2,
+      "condition": "Lluvia",
+      "humidity_pct": 73
+    }
+  },
+  {
+    "request_id": "W0039",
+    "timestamp": "2025-03-04T20:00:00",
+    "location": {
+      "sensor_id": "SEN01",
+      "lat": 6.2308,
+      "lon": -75.5906
+    },
+    "weather": {
+      "temp_c": 24.5,
+      "condition": "Nublado",
+      "humidity_pct": 70
+    }
+  },
+  {
+    "request_id": "W0040",
+    "timestamp": "2025-03-17T22:00:00",
+    "location": {
+      "sensor_id": "SEN04",
+      "lat": 6.2865,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 19.1,
+      "condition": "Soleado",
+      "humidity_pct": 70
+    }
+  },
+  {
+    "request_id": "W0041",
+    "timestamp": "2025-03-08T05:00:00",
+    "location": {
+      "sensor_id": "SEN04",
+      "lat": 6.2865,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 25.6,
+      "condition": "Lluvia",
+      "humidity_pct": 68
+    }
+  },
+  {
+    "request_id": "W0042",
+    "timestamp": "2025-03-10T05:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 20.1,
+      "condition": "Lluvia",
+      "humidity_pct": 66
+    }
+  },
+  {
+    "request_id": "W0043",
+    "timestamp": "2025-03-02T12:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": 27.3,
+      "condition": "Lluvia",
+      "humidity_pct": 88
+    }
+  },
+  {
+    "request_id": "W0044",
+    "timestamp": "2025-03-16T07:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 21.8,
+      "condition": "Nublado",
+      "humidity_pct": 55
+    }
+  },
+  {
+    "request_id": "W0045",
+    "timestamp": "2025-03-04T09:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": null,
+      "condition": "Soleado",
+      "humidity_pct": 42
+    }
+  },
+  {
+    "request_id": "W0046",
+    "timestamp": "2025-03-19T13:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 25.6,
+      "condition": "Soleado",
+      "humidity_pct": 56
+    }
+  },
+  {
+    "request_id": "W0047",
+    "timestamp": "2025-03-05T19:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 22.7,
+      "condition": "Soleado",
+      "humidity_pct": 71
+    }
+  },
+  {
+    "request_id": "W0048",
+    "timestamp": "2025-03-19T17:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 18.8,
+      "condition": "Nublado",
+      "humidity_pct": 59
+    }
+  },
+  {
+    "request_id": "W0049",
+    "timestamp": "2025-03-12T06:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": 26.6,
+      "condition": "Lluvia",
+      "humidity_pct": 45
+    }
+  },
+  {
+    "request_id": "W0050",
+    "timestamp": "2025-03-07T18:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": 25.2,
+      "condition": "Lluvia",
+      "humidity_pct": 43
+    }
+  },
+  {
+    "request_id": "W0051",
+    "timestamp": "2025-03-18T00:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 18.7,
+      "condition": "Soleado",
+      "humidity_pct": 46
+    }
+  },
+  {
+    "request_id": "W0052",
+    "timestamp": "2025-03-08T06:00:00",
+    "location": {
+      "sensor_id": "SEN01",
+      "lat": 6.2308,
+      "lon": -75.5906
+    },
+    "weather": {
+      "temp_c": 23.6,
+      "condition": "Lluvia",
+      "humidity_pct": 82
+    }
+  },
+  {
+    "request_id": "W0053",
+    "timestamp": "2025-03-17T13:00:00",
+    "location": {
+      "sensor_id": "SEN05",
+      "lat": 6.247,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 19.2,
+      "condition": "Soleado",
+      "humidity_pct": 46
+    }
+  },
+  {
+    "request_id": "W0054",
+    "timestamp": "2025-03-02T00:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": 23.0,
+      "condition": "Lluvia",
+      "humidity_pct": 40
+    }
+  },
+  {
+    "request_id": "W0055",
+    "timestamp": "2025-03-02T10:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 26.9,
+      "condition": "Soleado",
+      "humidity_pct": 65
+    }
+  },
+  {
+    "request_id": "W0056",
+    "timestamp": "2025-03-10T15:00:00",
+    "location": {
+      "sensor_id": "SEN04",
+      "lat": 6.2865,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 26.8,
+      "condition": "Soleado",
+      "humidity_pct": 87
+    }
+  },
+  {
+    "request_id": "W0057",
+    "timestamp": "2025-03-16T11:00:00",
+    "location": {
+      "sensor_id": "SEN04",
+      "lat": 6.2865,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 23.1,
+      "condition": "Nublado",
+      "humidity_pct": 43
+    }
+  },
+  {
+    "request_id": "W0058",
+    "timestamp": "2025-03-09T23:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": 25.2,
+      "condition": "Nublado",
+      "humidity_pct": 83
+    }
+  },
+  {
+    "request_id": "W0059",
+    "timestamp": "2025-03-05T17:00:00",
+    "location": {
+      "sensor_id": "SEN01",
+      "lat": 6.2308,
+      "lon": -75.5906
+    },
+    "weather": {
+      "temp_c": 18.0,
+      "condition": "Soleado",
+      "humidity_pct": 70
+    }
+  },
+  {
+    "request_id": "W0060",
+    "timestamp": "2025-03-17T11:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 23.9,
+      "condition": "Soleado",
+      "humidity_pct": 75
+    }
+  },
+  {
+    "request_id": "W0061",
+    "timestamp": "2025-03-20T08:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": 25.7,
+      "condition": "Lluvia",
+      "humidity_pct": 49
+    }
+  },
+  {
+    "request_id": "W0062",
+    "timestamp": "2025-03-08T05:00:00",
+    "location": {
+      "sensor_id": "SEN01",
+      "lat": 6.2308,
+      "lon": -75.5906
+    },
+    "weather": {
+      "temp_c": 20.8,
+      "condition": "Lluvia",
+      "humidity_pct": 48
+    }
+  },
+  {
+    "request_id": "W0063",
+    "timestamp": "2025-03-13T08:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 22.4,
+      "condition": "Soleado",
+      "humidity_pct": 73
+    }
+  },
+  {
+    "request_id": "W0064",
+    "timestamp": "2025-03-10T20:00:00",
+    "location": {
+      "sensor_id": "SEN05",
+      "lat": 6.247,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 23.8,
+      "condition": "Lluvia",
+      "humidity_pct": 80
+    }
+  },
+  {
+    "request_id": "W0065",
+    "timestamp": "2025-03-20T14:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 22.0,
+      "condition": "Soleado",
+      "humidity_pct": 64
+    }
+  },
+  {
+    "request_id": "W0066",
+    "timestamp": "2025-03-09T12:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": 25.4,
+      "condition": "Soleado",
+      "humidity_pct": 58
+    }
+  },
+  {
+    "request_id": "W0067",
+    "timestamp": "2025-03-14T12:00:00",
+    "location": {
+      "sensor_id": "SEN04",
+      "lat": 6.2865,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 23.6,
+      "condition": "Nublado",
+      "humidity_pct": 47
+    }
+  },
+  {
+    "request_id": "W0068",
+    "timestamp": "2025-03-16T17:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 20.4,
+      "condition": "Lluvia",
+      "humidity_pct": 72
+    }
+  },
+  {
+    "request_id": "W0069",
+    "timestamp": "2025-03-11T09:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": 20.0,
+      "condition": "Nublado",
+      "humidity_pct": 70
+    }
+  },
+  {
+    "request_id": "W0070",
+    "timestamp": "2025-03-12T07:00:00",
+    "location": {
+      "sensor_id": "SEN05",
+      "lat": 6.247,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 20.2,
+      "condition": "Soleado",
+      "humidity_pct": 50
+    }
+  },
+  {
+    "request_id": "W0071",
+    "timestamp": "2025-03-15T15:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": 20.1,
+      "condition": "Lluvia",
+      "humidity_pct": 60
+    }
+  },
+  {
+    "request_id": "W0072",
+    "timestamp": "2025-03-01T22:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 28.3,
+      "condition": "Nublado",
+      "humidity_pct": 76
+    }
+  },
+  {
+    "request_id": "W0073",
+    "timestamp": "2025-03-18T01:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 20.4,
+      "condition": "Soleado",
+      "humidity_pct": 72
+    }
+  },
+  {
+    "request_id": "W0074",
+    "timestamp": "2025-03-10T00:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": null,
+      "condition": "Soleado",
+      "humidity_pct": 43
+    }
+  },
+  {
+    "request_id": "W0075",
+    "timestamp": "2025-03-12T04:00:00",
+    "location": {
+      "sensor_id": "SEN01",
+      "lat": 6.2308,
+      "lon": -75.5906
+    },
+    "weather": {
+      "temp_c": 23.2,
+      "condition": "Nublado",
+      "humidity_pct": 57
+    }
+  },
+  {
+    "request_id": "W0076",
+    "timestamp": "2025-03-17T22:00:00",
+    "location": {
+      "sensor_id": "SEN04",
+      "lat": 6.2865,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": null,
+      "condition": "Lluvia",
+      "humidity_pct": 81
+    }
+  },
+  {
+    "request_id": "W0077",
+    "timestamp": "2025-03-10T05:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 30.1,
+      "condition": "Soleado",
+      "humidity_pct": 45
+    }
+  },
+  {
+    "request_id": "W0078",
+    "timestamp": "2025-03-12T12:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 23.0,
+      "condition": "Soleado",
+      "humidity_pct": 50
+    }
+  },
+  {
+    "request_id": "W0079",
+    "timestamp": "2025-03-16T09:00:00",
+    "location": {
+      "sensor_id": "SEN01",
+      "lat": 6.2308,
+      "lon": -75.5906
+    },
+    "weather": {
+      "temp_c": 23.5,
+      "condition": "Soleado",
+      "humidity_pct": 61
+    }
+  },
+  {
+    "request_id": "W0080",
+    "timestamp": "2025-03-19T16:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": 20.3,
+      "condition": "Lluvia",
+      "humidity_pct": 68
+    }
+  },
+  {
+    "request_id": "W0081",
+    "timestamp": "2025-03-06T13:00:00",
+    "location": {
+      "sensor_id": "SEN04",
+      "lat": 6.2865,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 23.0,
+      "condition": "Nublado",
+      "humidity_pct": 49
+    }
+  },
+  {
+    "request_id": "W0082",
+    "timestamp": "2025-03-09T01:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 23.1,
+      "condition": "Lluvia",
+      "humidity_pct": 83
+    }
+  },
+  {
+    "request_id": "W0083",
+    "timestamp": "2025-03-07T01:00:00",
+    "location": {
+      "sensor_id": "SEN01",
+      "lat": 6.2308,
+      "lon": -75.5906
+    },
+    "weather": {
+      "temp_c": 23.0,
+      "condition": "Soleado",
+      "humidity_pct": 67
+    }
+  },
+  {
+    "request_id": "W0084",
+    "timestamp": "2025-03-05T13:00:00",
+    "location": {
+      "sensor_id": "SEN04",
+      "lat": 6.2865,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 25.4,
+      "condition": "Soleado",
+      "humidity_pct": 80
+    }
+  },
+  {
+    "request_id": "W0085",
+    "timestamp": "2025-03-10T10:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 18.8,
+      "condition": "Soleado",
+      "humidity_pct": 53
+    }
+  },
+  {
+    "request_id": "W0086",
+    "timestamp": "2025-03-15T23:00:00",
+    "location": {
+      "sensor_id": "SEN05",
+      "lat": 6.247,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 25.5,
+      "condition": "Lluvia",
+      "humidity_pct": 89
+    }
+  },
+  {
+    "request_id": "W0087",
+    "timestamp": "2025-03-15T20:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": 19.4,
+      "condition": "Soleado",
+      "humidity_pct": 59
+    }
+  },
+  {
+    "request_id": "W0088",
+    "timestamp": "2025-03-13T06:00:00",
+    "location": {
+      "sensor_id": "SEN01",
+      "lat": 6.2308,
+      "lon": -75.5906
+    },
+    "weather": {
+      "temp_c": 21.8,
+      "condition": "Nublado",
+      "humidity_pct": 42
+    }
+  },
+  {
+    "request_id": "W0089",
+    "timestamp": "2025-03-08T08:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": null,
+      "condition": "Nublado",
+      "humidity_pct": 85
+    }
+  },
+  {
+    "request_id": "W0090",
+    "timestamp": "2025-03-01T17:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": 23.8,
+      "condition": "Soleado",
+      "humidity_pct": 86
+    }
+  },
+  {
+    "request_id": "W0091",
+    "timestamp": "2025-03-14T21:00:00",
+    "location": {
+      "sensor_id": "SEN04",
+      "lat": 6.2865,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 21.5,
+      "condition": "Soleado",
+      "humidity_pct": 44
+    }
+  },
+  {
+    "request_id": "W0092",
+    "timestamp": "2025-03-07T21:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 24.9,
+      "condition": "Lluvia",
+      "humidity_pct": 78
+    }
+  },
+  {
+    "request_id": "W0093",
+    "timestamp": "2025-03-06T02:00:00",
+    "location": {
+      "sensor_id": "SEN04",
+      "lat": 6.2865,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 21.7,
+      "condition": "Lluvia",
+      "humidity_pct": 42
+    }
+  },
+  {
+    "request_id": "W0094",
+    "timestamp": "2025-03-18T18:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 22.9,
+      "condition": "Lluvia",
+      "humidity_pct": 57
+    }
+  },
+  {
+    "request_id": "W0095",
+    "timestamp": "2025-03-06T11:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 23.0,
+      "condition": "Lluvia",
+      "humidity_pct": 54
+    }
+  },
+  {
+    "request_id": "W0096",
+    "timestamp": "2025-03-08T11:00:00",
+    "location": {
+      "sensor_id": "SEN04",
+      "lat": 6.2865,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 22.6,
+      "condition": "Lluvia",
+      "humidity_pct": 76
+    }
+  },
+  {
+    "request_id": "W0097",
+    "timestamp": "2025-03-01T12:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 17.0,
+      "condition": "Soleado",
+      "humidity_pct": 58
+    }
+  },
+  {
+    "request_id": "W0098",
+    "timestamp": "2025-03-20T12:00:00",
+    "location": {
+      "sensor_id": "SEN05",
+      "lat": 6.247,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 25.9,
+      "condition": "Lluvia",
+      "humidity_pct": 49
+    }
+  },
+  {
+    "request_id": "W0099",
+    "timestamp": "2025-03-16T14:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 19.6,
+      "condition": "Lluvia",
+      "humidity_pct": 44
+    }
+  },
+  {
+    "request_id": "W0100",
+    "timestamp": "2025-03-05T23:00:00",
+    "location": {
+      "sensor_id": "SEN05",
+      "lat": 6.247,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 21.8,
+      "condition": "Soleado",
+      "humidity_pct": 68
+    }
+  },
+  {
+    "request_id": "W0101",
+    "timestamp": "2025-03-18T12:00:00",
+    "location": {
+      "sensor_id": "SEN04",
+      "lat": 6.2865,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 21.2,
+      "condition": "Soleado",
+      "humidity_pct": 89
+    }
+  },
+  {
+    "request_id": "W0102",
+    "timestamp": "2025-03-20T15:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": 22.6,
+      "condition": "Lluvia",
+      "humidity_pct": 71
+    }
+  },
+  {
+    "request_id": "W0103",
+    "timestamp": "2025-03-02T02:00:00",
+    "location": {
+      "sensor_id": "SEN05",
+      "lat": 6.247,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 24.3,
+      "condition": "Nublado",
+      "humidity_pct": 51
+    }
+  },
+  {
+    "request_id": "W0104",
+    "timestamp": "2025-03-12T14:00:00",
+    "location": {
+      "sensor_id": "SEN01",
+      "lat": 6.2308,
+      "lon": -75.5906
+    },
+    "weather": {
+      "temp_c": 26.5,
+      "condition": "Soleado",
+      "humidity_pct": 42
+    }
+  },
+  {
+    "request_id": "W0105",
+    "timestamp": "2025-03-07T17:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 22.5,
+      "condition": "Nublado",
+      "humidity_pct": 54
+    }
+  },
+  {
+    "request_id": "W0106",
+    "timestamp": "2025-03-16T08:00:00",
+    "location": {
+      "sensor_id": "SEN01",
+      "lat": 6.2308,
+      "lon": -75.5906
+    },
+    "weather": {
+      "temp_c": 24.7,
+      "condition": "Soleado",
+      "humidity_pct": 83
+    }
+  },
+  {
+    "request_id": "W0107",
+    "timestamp": "2025-03-02T04:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 23.2,
+      "condition": "Lluvia",
+      "humidity_pct": 88
+    }
+  },
+  {
+    "request_id": "W0108",
+    "timestamp": "2025-03-02T20:00:00",
+    "location": {
+      "sensor_id": "SEN05",
+      "lat": 6.247,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 21.7,
+      "condition": "Soleado",
+      "humidity_pct": 59
+    }
+  },
+  {
+    "request_id": "W0109",
+    "timestamp": "2025-03-13T10:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 19.8,
+      "condition": "Soleado",
+      "humidity_pct": 88
+    }
+  },
+  {
+    "request_id": "W0110",
+    "timestamp": "2025-03-19T21:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 16.2,
+      "condition": "Soleado",
+      "humidity_pct": 62
+    }
+  },
+  {
+    "request_id": "W0111",
+    "timestamp": "2025-03-08T03:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 21.9,
+      "condition": "Nublado",
+      "humidity_pct": 50
+    }
+  },
+  {
+    "request_id": "W0112",
+    "timestamp": "2025-03-10T16:00:00",
+    "location": {
+      "sensor_id": "SEN05",
+      "lat": 6.247,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 26.1,
+      "condition": "Lluvia",
+      "humidity_pct": 87
+    }
+  },
+  {
+    "request_id": "W0113",
+    "timestamp": "2025-03-08T22:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 22.5,
+      "condition": "Soleado",
+      "humidity_pct": 46
+    }
+  },
+  {
+    "request_id": "W0114",
+    "timestamp": "2025-03-07T23:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 22.0,
+      "condition": "Soleado",
+      "humidity_pct": 49
+    }
+  },
+  {
+    "request_id": "W0115",
+    "timestamp": "2025-03-19T09:00:00",
+    "location": {
+      "sensor_id": "SEN06",
+      "lat": 6.245,
+      "lon": -75.585
+    },
+    "weather": {
+      "temp_c": 17.9,
+      "condition": "Nublado",
+      "humidity_pct": 66
+    }
+  },
+  {
+    "request_id": "W0116",
+    "timestamp": "2025-03-16T11:00:00",
+    "location": {
+      "sensor_id": "SEN01",
+      "lat": 6.2308,
+      "lon": -75.5906
+    },
+    "weather": {
+      "temp_c": 22.0,
+      "condition": "Lluvia",
+      "humidity_pct": 53
+    }
+  },
+  {
+    "request_id": "W0117",
+    "timestamp": "2025-03-05T04:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": 22.9,
+      "condition": "Lluvia",
+      "humidity_pct": 46
+    }
+  },
+  {
+    "request_id": "W0118",
+    "timestamp": "2025-03-04T01:00:00",
+    "location": {
+      "sensor_id": "SEN02",
+      "lat": 6.2145,
+      "lon": -75.5734
+    },
+    "weather": {
+      "temp_c": 21.5,
+      "condition": "Soleado",
+      "humidity_pct": 64
+    }
+  },
+  {
+    "request_id": "W0119",
+    "timestamp": "2025-03-09T19:00:00",
+    "location": {
+      "sensor_id": "SEN05",
+      "lat": 6.247,
+      "lon": -75.565
+    },
+    "weather": {
+      "temp_c": 22.2,
+      "condition": "Nublado",
+      "humidity_pct": 50
+    }
+  },
+  {
+    "request_id": "W0120",
+    "timestamp": "2025-03-08T04:00:00",
+    "location": {
+      "sensor_id": "SEN03",
+      "lat": 6.2093,
+      "lon": -75.571
+    },
+    "weather": {
+      "temp_c": 22.7,
+      "condition": "Soleado",
+      "humidity_pct": 47
+    }
+  }
+]

@@ -1,0 +1,293 @@
+\documentclass[11pt]{article}
+\usepackage[spanish,provide=*]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\tcbuselibrary{skins,breakable}
+
+\graphicspath{{figures/}}
+
+\newtcolorbox{contexto}[1][]{colback=blue!5,colframe=blue!40!black,title=#1,fonttitle=\bfseries,breakable}
+\newtcolorbox{pregunta}[1][]{colback=gray!5,colframe=gray!60!black,title=#1,fonttitle=\bfseries,breakable}
+\newtcolorbox{aviso}[1][]{colback=red!5,colframe=red!50!black,title=#1,fonttitle=\bfseries,breakable}
+
+\title{\vspace{-1.5cm}\textbf{Taller Práctico No. 1} \\[0.3em]
+\large Fundamentos en Ciencia de Datos \\
+\normalsize Maestría en Ciencia de Datos y Analítica -- Universidad EAFIT}
+\author{Docente: Jorge Iván Padilla-Buriticá}
+\date{Periodo académico 2026-2 \\ Fecha límite de entrega: domingo 26 de julio de 2026}
+
+\begin{document}
+\maketitle
+\vspace{-1cm}
+
+\begin{contexto}[Instrucciones generales]
+\begin{itemize}[leftmargin=1.3em]
+  \item Trabajo \textbf{en equipo} (el mismo equipo y el mismo conjunto de datos con el que trabajó en el notebook de este taller), a libro abierto.
+  \item Este documento \textbf{no evalúa cuánto código escribe el equipo}: evalúa \textbf{la calidad del razonamiento}. Los fragmentos de código solicitados deben ser cortos (1 a 5 líneas) y sirven para \emph{sustentar} una decisión, no para reemplazarla.
+  \item Los tres conjuntos de datos (A, B y C) son entregados por el docente el día de la sesión práctica; ningún equipo los conoce de antemano. Trabaje sobre \textbf{el conjunto de datos que su equipo eligió} durante todo el documento e indíquelo explícitamente al inicio de su respuesta.
+  \item Toda afirmación estadística debe ir acompañada de su justificación: ``el promedio es X'' sin argumento no tiene valor evaluativo.
+  \item Puede apoyarse en herramientas de IA generativa para redactar o verificar sintaxis de \texttt{pandas}, siempre que declare su uso según el Pacto Pedagógico del curso (ver \texttt{docs/declaracion\_uso\_IA.md} del repositorio de entrega). La IA no debe sustituir el criterio del equipo: se calificará la interpretación propia, no la del asistente.
+  \item Este documento se responde y se entrega junto con el notebook de este mismo taller, dentro del mismo repositorio de GitHub, antes de la fecha límite.
+\end{itemize}
+\end{contexto}
+
+\section*{Conjunto de datos elegido}
+El docente entregará el día de la sesión práctica los tres conjuntos de datos disponibles.
+Su equipo debe elegir \textbf{uno} y trabajar con él durante todo el documento:
+
+\begin{itemize}[leftmargin=1.3em]
+  \item \textbf{Dataset A -- Retail:} \texttt{retail\_ventas\_LIMPIO.csv} / \texttt{retail\_ventas\_CONTAMINADO.csv} (cadena de panaderías en Medellín).
+  \item \textbf{Dataset B -- Salud pública:} \texttt{salud\_consultas\_LIMPIO.csv} / \texttt{salud\_consultas\_CONTAMINADO.csv} (consultas por comuna).
+  \item \textbf{Dataset C -- Movilidad urbana:} \texttt{movilidad\_sensores\_LIMPIO.csv} / \texttt{movilidad\_sensores\_CONTAMINADO.csv} (sensores IoT de tráfico y clima).
+\end{itemize}
+
+\noindent\textbf{Conjunto de datos elegido: \underline{\hspace{4cm}}}
+
+%==============================================================
+\section{Parte 1 -- Análisis estadístico general (30\%)}
+%==============================================================
+\begin{contexto}[Objetivo de la parte]
+Evaluar su capacidad de aplicar el estadístico \emph{correcto} según el tipo de dato, sin necesidad de código: esta parte se responde sobre el archivo \textbf{LIMPIO} de su conjunto de datos.
+\end{contexto}
+
+\noindent Consulte el diccionario de variables de su conjunto de datos en el \textbf{Anexo A}.
+
+\begin{pregunta}[1.1 -- Taxonomía (6 pts)]
+Clasifique \textbf{cinco} variables de su conjunto de datos según la taxonomía vista en clase (nominal, ordinal, discreta, continua). Para cada una, explique en una frase por qué esa clasificación —y no otra— determina qué estadístico de tendencia central es válido usar.
+\end{pregunta}
+
+\begin{pregunta}[1.2 -- Medidas de tendencia central y dispersión (8 pts)]
+Para \textbf{una variable ordinal} y \textbf{una variable continua} de su conjunto de datos:
+\begin{enumerate}[label=\alph*)]
+  \item Indique qué medida de tendencia central calcularía y por qué (justifique por qué \emph{no} usaría la media en la variable ordinal si aplica).
+  \item Proponga la medida de dispersión adecuada para la variable continua y explique qué le diría sobre la variabilidad del proceso de negocio subyacente.
+  \item Explique en qué escenario el rango intercuartílico (IQR) sería más informativo que la desviación estándar para esta variable.
+\end{enumerate}
+\end{pregunta}
+
+\begin{pregunta}[1.3 -- Cualitativo vs. cuantitativo (6 pts)]
+Elija una variable categórica (cualitativa) de su conjunto de datos. Describa \textbf{dos} formas de resumirla (una numérica -- ej. tabla de frecuencias/proporciones -- y una gráfica) y explique qué decisión de negocio de su conjunto de datos se apoyaría en ese resumen.
+\end{pregunta}
+
+\begin{pregunta}[1.4 -- Forma de la distribución y atípicos (6 pts)]
+Sin necesidad de graficarla, describa qué esperaría observar en la distribución de la variable continua principal de su conjunto de datos (¿simétrica, sesgada, con colas largas?) y justifique con base en el proceso que la genera (ej.\ demanda, tiempos de espera, conteos de tráfico). Explique un criterio (no necesariamente estadístico formal) para decidir si un valor es ``atípico pero real'' vs.\ ``error de captura''.
+\end{pregunta}
+
+\begin{pregunta}[1.5 -- Pregunta transversal (4 pts)]
+En sus palabras: ¿por qué dos datasets con la \textbf{misma media} pueden requerir decisiones de negocio completamente distintas? Ilustre con una variable de su conjunto de datos.
+\end{pregunta}
+
+%==============================================================
+\section{Parte 2 -- Análisis y transformación de datos con problemas (40\%)}
+%==============================================================
+\begin{contexto}[Objetivo de la parte]
+Esta parte se responde sobre el archivo \textbf{CONTAMINADO} de su conjunto de datos. Debe diagnosticar los problemas de calidad (principio GIGO: completitud, unicidad, consistencia) y proponer/justificar su corrección con \texttt{pandas}. Se espera código corto y \emph{correcto en su lógica}, no una solución completa productizada.
+\end{contexto}
+
+\begin{pregunta}[2.1 -- Diagnóstico de calidad (10 pts)]
+Enumere \textbf{cinco} problemas de calidad distintos que usted identifique en el archivo contaminado de su conjunto de datos (ej.\ duplicados, valores faltantes, formatos de fecha mixtos, etiquetas categóricas inconsistentes, coordenadas geográficas inválidas, valores imposibles). Para cada uno, indique \textbf{cómo lo detectaría} con pandas (nombre el método, ej. \texttt{duplicated()}, \texttt{isnull().sum()}, \texttt{unique()}) sin necesariamente ejecutar el código.
+\end{pregunta}
+
+\begin{pregunta}[2.2 -- Fechas (6 pts)]
+La columna de fecha/hora de su conjunto de datos llega con formatos mixtos. Escriba la línea de \texttt{pandas} que usaría para convertirla a \texttt{datetime}, garantizando que los valores no convertibles queden como nulos en vez de detener el proceso. Luego responda: si el 8\,\% de las fechas no logran convertirse, ¿las elimina, las imputa, o las deja como nulo explícito? Justifique según el problema de negocio de su conjunto de datos.
+\end{pregunta}
+
+\begin{pregunta}[2.3 -- Variable lógica / categórica (6 pts)]
+Identifique una variable de su conjunto de datos con inconsistencias de texto (mayúsculas, espacios, sinónimos) o con codificación lógica/booleana implícita. Proponga la transformación (\texttt{str.strip()}, \texttt{str.lower()}, mapeo con diccionario, o similar) y justifique el criterio que usó para decidir qué categorías son ``la misma'' categoría.
+\end{pregunta}
+
+\begin{pregunta}[2.4 -- Georreferenciación (8 pts)]
+Su conjunto de datos contiene coordenadas (\texttt{lat}/\texttt{lon}) con errores de captura (coordenadas invertidas, ceros, o fuera del área de Medellín). Proponga una regla de validación (rango aproximado de latitud/longitud de Medellín) y escriba en pandas cómo marcaría como inválida una fila que la incumpla. Discuta: ¿corregiría automáticamente una coordenada invertida (swap lat/lon) o la marcaría para revisión manual? Justifique el riesgo de cada opción.
+\end{pregunta}
+
+\begin{pregunta}[2.5 -- Imputación y valores imposibles (6 pts)]
+Elija una variable numérica con valores imposibles (ej.\ negativos donde no corresponde, o fuera de rango físico/lógico). Proponga: (a) el criterio para definir el rango válido, (b) la estrategia de imputación o eliminación, y (c) qué sesgo introduciría su decisión en el análisis posterior si la estrategia es incorrecta.
+\end{pregunta}
+
+\begin{pregunta}[2.6 -- Duplicados y llave de negocio (4 pts)]
+Explique qué columna(s) usaría como ``llave de negocio'' para detectar duplicados reales (no solo duplicados exactos de fila) en su conjunto de datos, y por qué un duplicado exacto de fila no es lo mismo que un duplicado de evento de negocio.
+\end{pregunta}
+
+%==============================================================
+\section{Parte 3 -- Interpretación de resultados y decisión (30\%)}
+%==============================================================
+\begin{contexto}[Objetivo de la parte]
+A continuación se presentan resultados ya calculados (tablas y gráficas) para los tres conjuntos de datos, obtenidos a partir de los datos \textbf{limpios}. Responda \textbf{únicamente} la sección correspondiente al conjunto de datos que su equipo eligió. No se requiere código en esta parte: se evalúa su capacidad de leer evidencia y argumentar una decisión.
+\end{contexto}
+
+% ---------------- TRACK A RESULTS ----------------
+\subsection*{Resultados -- Dataset A: Retail}
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Categoría & N transacciones & Unidades prom. & Precio prom. (COP) & Rating prom. \\
+\midrule
+Bebidas   & 104 & 2.88 & 3\,964 & 3.90 \\
+Pan       & 109 & 4.06 & 2\,642 & 3.81 \\
+Pasteles  & 91  & 2.62 & 5\,831 & 4.01 \\
+Snacks    & 116 & 3.34 & 2\,497 & 3.85 \\
+\bottomrule
+\end{tabular}
+\caption{Resumen por categoría de producto (datos limpios, 420 transacciones, 8 tiendas).}
+\end{table}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.95\textwidth]{datasetA_fig1.png}
+\caption{Izquierda: unidades vendidas promedio por categoría. Derecha: calificación promedio por tienda.}
+\end{figure}
+
+\begin{pregunta}[3.A -- Decisión de inventario (30 pts si este fue el conjunto de datos elegido por su equipo)]
+La gerencia debe decidir en qué categoría concentrar el próximo presupuesto de reabastecimiento y qué tienda requiere intervención prioritaria.
+\begin{enumerate}[label=\alph*)]
+  \item A partir de la tabla, ¿qué categoría tiene mayor rotación (unidades) pero menor margen aparente (precio), y qué implicación tiene esto para la política de inventario (recuerde el ``Dilema del Inventario'' visto en clase: costo de sobre-stock vs.\ costo de oportunidad)?
+  \item Con base en la gráfica de calificación por tienda, ¿qué tienda(s) requieren intervención? Proponga \textbf{una} hipótesis de negocio (no estadística) que explique el rating bajo.
+  \item Redacte la recomendación final en máximo 5 líneas, dirigida a un gerente no técnico, indicando la acción concreta y el riesgo de no actuar.
+\end{enumerate}
+\end{pregunta}
+
+% ---------------- TRACK B RESULTS ----------------
+\subsection*{Resultados -- Dataset B: Salud pública}
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Comuna & N consultas & Edad prom. & \% Urgencia Alta & \% Hospitalizado \\
+\midrule
+Popular          & 31 & 34.3 & 19.4 & 16.1 \\
+Santa Cruz       & 38 & 47.3 & 15.8 & 7.9 \\
+La América       & 33 & 45.3 & 15.2 & 3.0 \\
+Robledo          & 29 & 44.4 & 17.2 & 3.4 \\
+San Javier       & 25 & 36.8 & 4.0  & 12.0 \\
+Laureles         & 40 & 40.2 & 12.5 & 5.0 \\
+\bottomrule
+\end{tabular}
+\caption{Subconjunto de comunas con mayor \% de urgencia alta o de hospitalización (tabla completa disponible en \texttt{datasetB\_tabla.csv}, 16 comunas, 520 consultas).}
+\end{table}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.95\textwidth]{datasetB_fig1.png}
+\caption{Izquierda: consultas totales por comuna (Top 10). Derecha: proporción de nivel de urgencia por comuna.}
+\end{figure}
+
+\begin{pregunta}[3.B -- Decisión de asignación de recursos (30 pts si este fue el conjunto de datos elegido por su equipo)]
+La Secretaría de Salud debe decidir en qué comunas reforzar personal de urgencias la próxima semana, con presupuesto limitado para 3 comunas.
+\begin{enumerate}[label=\alph*)]
+  \item Compare Popular y San Javier: una tiene mayor \% de urgencia alta y la otra mayor \% de hospitalización. ¿Son la misma señal? Explique por qué estas dos métricas pueden priorizar comunas distintas.
+  \item ¿Usaría el volumen total de consultas (gráfica izquierda) o la proporción de urgencia (gráfica derecha) como criterio principal de priorización? Justifique el riesgo de usar solo una de las dos.
+  \item Proponga las 3 comunas a priorizar y redacte la justificación en máximo 6 líneas, mencionando explícitamente qué haría si los datos de una comuna tienen \textbf{pocas observaciones} (riesgo de conclusiones con muestras pequeñas).
+\end{enumerate}
+\end{pregunta}
+
+% ---------------- TRACK C RESULTS ----------------
+\subsection*{Resultados -- Dataset C: Movilidad urbana}
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Tipo de vía & N lecturas & Conteo prom. & Conteo máx. & Temp. prom. (°C) \\
+\midrule
+Arteria & 480 & 22.5 & 54 & 23.3 \\
+Local   & 480 & 23.0 & 53 & 23.1 \\
+Troncal & 480 & 23.2 & 53 & 22.9 \\
+\bottomrule
+\end{tabular}
+\caption{Resumen por tipo de vía (datos limpios, 6 sensores, 20 días, lecturas cada 2 horas).}
+\end{table}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.95\textwidth]{datasetC_fig1.png}
+\caption{Izquierda: conteo promedio de vehículos por hora del día. Derecha: conteo promedio por sensor.}
+\end{figure}
+
+\begin{pregunta}[3.C -- Decisión de gestión de tráfico (30 pts si este fue el conjunto de datos elegido por su equipo)]
+La Secretaría de Movilidad debe decidir en qué franjas horarias y en qué corredores concentrar un piloto de semaforización inteligente.
+\begin{enumerate}[label=\alph*)]
+  \item A partir de la gráfica por hora, identifique los picos de tráfico y proponga una hipótesis del fenómeno urbano que los explica.
+  \item La tabla muestra conteos promedio casi idénticos entre Arteria, Local y Troncal. ¿Esto significa que el tipo de vía \textbf{no} es relevante para la decisión? Argumente qué otra evidencia (de la gráfica derecha, por sensor) matiza esta conclusión.
+  \item Redacte la recomendación final en máximo 6 líneas: ¿en qué corredor(es) y horario(s) iniciaría el piloto, y qué variable adicional (de las disponibles: clima, ubicación) monitorearía para validar el impacto?
+\end{enumerate}
+\end{pregunta}
+
+%==============================================================
+\newpage
+\appendix
+\section*{Anexo A -- Diccionario de variables por conjunto de datos}
+
+\subsection*{Dataset A -- Retail (\texttt{retail\_ventas})}
+\begin{longtable}{p{3.2cm}p{3cm}p{7cm}}
+\toprule
+Variable & Tipo & Descripción \\
+\midrule
+\texttt{transaction\_id} & Nominal (id) & Identificador único de transacción \\
+\texttt{store\_id} / \texttt{comuna} & Nominal & Tienda y zona de Medellín \\
+\texttt{date} & Fecha & Fecha de la venta \\
+\texttt{category} & Nominal & Pan, Pasteles, Bebidas, Snacks \\
+\texttt{units\_sold} & Discreta & Unidades vendidas en la transacción \\
+\texttt{unit\_price} & Continua & Precio unitario (COP) \\
+\texttt{payment\_method} & Nominal & Efectivo, Tarjeta, App \\
+\texttt{customer\_rating} & Ordinal & Calificación 1 a 5 \\
+\texttt{store\_lat}, \texttt{store\_lon} & Continua (geo) & Coordenadas de la tienda \\
+\bottomrule
+\end{longtable}
+
+\subsection*{Dataset B -- Salud (\texttt{salud\_consultas})}
+\begin{longtable}{p{3.2cm}p{3cm}p{7cm}}
+\toprule
+Variable & Tipo & Descripción \\
+\midrule
+\texttt{consulta\_id} & Nominal (id) & Identificador único de consulta \\
+\texttt{fecha} & Fecha & Fecha de la consulta \\
+\texttt{comuna\_id}, \texttt{comuna\_nombre} & Nominal & Comuna de Medellín (1-16) \\
+\texttt{edad} & Discreta & Edad del paciente (años) \\
+\texttt{sexo} & Nominal & F / M \\
+\texttt{sintoma\_principal} & Nominal & Síntoma reportado \\
+\texttt{nivel\_urgencia} & Ordinal & Baja $<$ Media $<$ Alta \\
+\texttt{resultado} & Nominal & Ambulatorio, Remitido, Hospitalizado \\
+\texttt{lat}, \texttt{lon} & Continua (geo) & Coordenadas asociadas a la comuna \\
+\bottomrule
+\end{longtable}
+
+\subsection*{Dataset C -- Movilidad (\texttt{movilidad\_sensores})}
+\begin{longtable}{p{3.2cm}p{3cm}p{7cm}}
+\toprule
+Variable & Tipo & Descripción \\
+\midrule
+\texttt{sensor\_id}, \texttt{ubicacion} & Nominal & Identificador y nombre del corredor vial \\
+\texttt{tipo\_via} & Nominal/Ordinal* & Troncal, Arteria, Local \\
+\texttt{timestamp} & Fecha-hora & Momento de la lectura \\
+\texttt{conteo\_vehiculos} & Discreta & Vehículos contados en el intervalo \\
+\texttt{temperatura\_c} & Continua & Temperatura ambiente (°C) \\
+\texttt{condicion\_clima} & Nominal & Soleado, Nublado, Lluvia \\
+\texttt{lat}, \texttt{lon} & Continua (geo) & Coordenadas del sensor \\
+\bottomrule
+\end{longtable}
+{\footnotesize *Discuta usted mismo en 1.1 si \texttt{tipo\_via} debe tratarse como nominal u ordinal según jerarquía vial -- no hay una única respuesta correcta.}
+
+\section*{Anexo B -- Rúbrica general}
+\begin{longtable}{p{2.5cm}p{9cm}r}
+\toprule
+Parte & Criterio dominante & Peso \\
+\midrule
+Parte 1 & Correcta identificación del tipo de dato y del estadístico asociado; claridad argumentativa. & 30\% \\
+Parte 2 & Diagnóstico correcto del problema de calidad + corrección propuesta coherente y justificada (no solo código que ``funcione''). & 40\% \\
+Parte 3 & Lectura correcta de la evidencia visual/tabular; decisión de negocio explícita, accionable y con riesgos declarados. & 30\% \\
+\bottomrule
+\end{longtable}
+
+\end{document}
