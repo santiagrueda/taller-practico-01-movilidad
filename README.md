@@ -73,8 +73,11 @@ jupyter nbconvert --to notebook --execute --inplace notebooks/taller_practico_01
 jupyter notebook notebooks/taller_practico_01_analisis.ipynb
 ```
 
-También puede abrirse directamente en Google Colab subiendo
-`notebooks/taller_practico_01_analisis.ipynb` y los archivos de `data/raw/`.
+**Google Colab:** una vez el equipo haga `git push` a GitHub, abran
+`https://colab.research.google.com/github/<usuario>/<nombre-repo>/blob/main/notebooks/taller_practico_01_analisis.ipynb`.
+La primera celda del notebook detecta automáticamente que está corriendo en Colab, clona el
+repositorio y ajusta el directorio de trabajo — **solo deben reemplazar `REPO_URL` en esa celda**
+por la URL real del repositorio antes de ejecutar.
 
 ## 5. Principales hallazgos
 
