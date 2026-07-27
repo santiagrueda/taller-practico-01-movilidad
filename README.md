@@ -3,15 +3,15 @@
 **Curso:** Fundamentos en Ciencia de Datos — Maestría en Ciencia de Datos y Analítica, EAFIT
 **Conjunto de datos elegido:** C - Movilidad urbana
 **Fecha límite de entrega:** domingo 26 de julio de 2026
-**Fecha de entrega real:** [dd/mm/aaaa]
+**Fecha de entrega real:** 27/07/2026
 
 **Integrantes del equipo:**
 
-| Nombre completo | Cédula         |
-| ---------------- | -------------- |
-| Santiago Alberto Velez Casallas | [N° de cédula] |
-| Cristian Miguel Gomez Salazar   | [N° de cédula] |
-| Santiago Rueda Mira             | [N° de cédula] |
+| Nombre completo | Cédula      |
+| --------------------------------| ----------- |
+| Santiago Alberto Vélez Casallas | 1072714309  |
+| Santiago Rueda Mira             | 1152217529  |
+| Cristian Miguel Gómez Salazar   | 1003402002  |
 
 ---
 
@@ -24,21 +24,66 @@ típicos de un proceso real: fechas en 5 formatos distintos, categorías de clim
 lecturas duplicadas, conteos imposibles (negativos o de 99.999 vehículos) y un sensor con
 coordenadas invertidas fuera de Medellín. Después de limpiarlo, la evidencia es clara: **el tráfico
 casi se triplica en dos franjas horarias (6-8 a.m. y 4-6 p.m.) sin importar el tipo de vía ni el
-corredor específico** — la variable que realmente importa es la hora, no el lugar. Recomendamos
-iniciar el piloto en los 6 corredores por igual, concentrado en esas dos franjas, en vez de elegir
-un solo tipo de vía como prioridad (los datos no lo sustentan).
+corredor específico** — la variable que realmente importa es la hora, no el lugar.
+
+Recomendamos iniciar el piloto en los 6 corredores por igual, concentrado en esas dos franjas
+horarias, sin embargo seguir monitoreando las demás variables de control porque su efecto aún no
+fue concluyente con los datos disponibles.
 
 ## 2. Pregunta de negocio
 
 - **Pregunta ancla del conjunto de datos:** ¿En qué corredores y horarios se debe pilotear
   semaforización inteligente?
-- **Pregunta específica que el equipo decidió responder:** ¿cuál es la probabilidad de que un
+- **Pregunta específica que el equipo decidió responder:** ¿Cuál es la probabilidad de que un
   corredor supere un umbral de congestión ("Alto") en una franja horaria específica, sin importar su
-  tipo de vía?
+  tipo de vía? (ver sección "Decisión Recomendada" del notebook).
 
-## 3. El viaje de los datos: de crudo a confiable
+## 3. Estructura del repositorio
 
-### 3.1 Lo que encontramos al abrir el archivo contaminado
+```
+.
+├── README.md
+├── requirements.txt
+├── data/
+│   ├── raw/                  # datos originales (sin modificar)
+│   └── processed/            # datos ya limpios, generados por el notebook
+├── notebooks/
+│   └── taller_practico_01_analisis.ipynb
+├── results/
+│   ├── figuras/
+│   └── tabla_diagnostico_gigo.csv
+├── taller_practico/
+│   ├── Taller_Practico_01.tex           # enunciado original
+│   ├── Taller_Practico_01.pdf           # enunciado original
+│   └── Taller_Practico_01_respuestas.md # respuestas Parte 1, 2 y 3
+└── docs/
+    └── declaracion_uso_IA.md
+```
+
+## 4. Cómo reproducir el análisis (solamente vía terminal)
+
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/santiagrueda/taller-practico-01-movilidad.git
+cd taller-practico-01-movilidad
+
+# 2. Crear entorno e instalar dependencias
+pip install -r requirements.txt
+
+# 3. Ejecutar el notebook de inicio a fin
+jupyter nbconvert --to notebook --execute --inplace notebooks/taller_practico_01_analisis.ipynb
+# o abrirlo interactivamente:
+jupyter notebook notebooks/taller_practico_01_analisis.ipynb
+```
+
+**Google Colab:** abran
+`https://colab.research.google.com/github/santiagrueda/taller-practico-01-movilidad/blob/main/notebooks/taller_practico_01_analisis.ipynb`.
+La primera celda del notebook detecta que está corriendo en Colab, clona el repositorio (URL ya
+configurada) y ajusta el directorio de trabajo antes de ejecutar el resto.
+
+## 5. El viaje de los datos: de crudo a confiable
+
+### 5.1 Lo que encontramos al abrir el archivo contaminado
 
 Antes de analizar nada, diagnosticamos la calidad del archivo `movilidad_sensores_CONTAMINADO.csv`
 (1455 filas) sin corregirlo todavía. Encontramos 7 problemas distintos:
@@ -55,7 +100,7 @@ Antes de analizar nada, diagnosticamos la calidad del archivo `movilidad_sensore
 
 *(Tabla completa con la estrategia de corrección de cada uno: [`results/tabla_diagnostico_gigo.csv`](results/tabla_diagnostico_gigo.csv))*
 
-### 3.2 Cómo lo arreglamos (y por qué)
+### 5.2 Cómo lo arreglamos (y por qué)
 
 - **Fechas:** escribimos un parser que reconoce los 5 formatos explícitamente (en vez de dejar que
   pandas asuma el formato de EE. UU. y convierta `04/03/2025` en "4 de abril" por error) → 0% de
@@ -77,16 +122,16 @@ al final lo comparamos solo para control de calidad — nuestras coordenadas cor
 (6.2864, -75.5650) coinciden casi exactamente con las del archivo limpio (6.2864, -75.5650), y el
 conteo/temperatura promedio quedaron a menos de 0.1 de diferencia.
 
-## 4. Lo que dicen los datos ya limpios
+## 6. Lo que dicen los datos ya limpios
 
-### 4.1 El patrón horario domina todo
+### 6.1 El patrón horario domina todo
 
 ![Conteo promedio de vehículos por hora del día](results/figuras/01_conteo_por_hora.png)
 
 El tráfico pasa de ~14 vehículos/lectura en horas valle a ~40 en hora pico — casi el triple. Los
 picos (6-8h y 16-18h) coinciden con la entrada y salida laboral/escolar típica de Medellín.
 
-### 4.2 Ni el tipo de vía ni el sensor explican la diferencia
+### 6.2 Ni el tipo de vía ni el sensor explican la diferencia
 
 | Tipo de vía | N lecturas | Conteo prom. |
 |---|---|---|
@@ -100,7 +145,7 @@ La tabla por tipo de vía ya es casi plana (22.5–23.2); el detalle por sensor 
 esa lectura en vez de matizarla (rango 22.2–23.4 entre los 6 sensores). Es un hallazgo honesto aunque
 no sea el más "vistoso": la ubicación casi no discrimina, la hora sí.
 
-### 4.3 El conteo de vehículos está sesgado, no es una campana simétrica
+### 6.3 El conteo de vehículos está sesgado, no es una campana simétrica
 
 ![Distribución de conteo_vehiculos](results/figuras/02_histograma_conteo.png)
 
@@ -117,7 +162,7 @@ lecturas bajas de madrugada, pocas muy altas en pico) y justifica usar mediana/I
 media/desviación estándar para este caso. La temperatura, en cambio, es simétrica y se resume bien
 con la media.
 
-### 4.4 El clima no es (por ahora) un factor decisivo
+### 6.4 El clima no es (por ahora) un factor decisivo
 
 | Condición climática | % lecturas | % en nivel de tráfico "Alto" |
 |---|---|---|
@@ -130,7 +175,7 @@ La proporción de tráfico "Alto" es parecida entre Soleado, Nublado y Lluvia �
 días el clima registrado no parece mover la aguja tanto como la hora del día. Lo dejamos como
 variable a seguir monitoreando (ver limitaciones), no como palanca de decisión.
 
-### 4.5 Los 6 sensores, ya en su lugar correcto — y sobre el mapa real de Medellín
+### 6.5 Los 6 sensores, ya en su lugar correcto — y sobre el mapa real de Medellín
 
 ![Ubicación de sensores por tipo de vía](results/figuras/03_mapa_sensores.png)
 
@@ -148,73 +193,34 @@ Aranjuez/Castilla, **SEN04** (Troncal, el que tenía coordenadas invertidas) en 
 (Arteria) en La Candelaria, **SEN03** (Local) en Laureles-Estadio, y **SEN05**/**SEN06**
 (Arteria/Local) cerca de El Poblado. Geográficamente sí hay una lógica de red vial distinta entre
 tipos de vía — los Troncales conectan corredores norte-sur estructurantes — aunque, como vimos en
-4.2, eso no se traduce en una diferencia grande de volumen promedio en estos 6 sensores durante este
+6.2, eso no se traduce en una diferencia grande de volumen promedio en estos 6 sensores durante este
 período. La versión interactiva completa (zoom, pan, hover con detalle por sensor) está en
 [`results/figuras/05_mapa_interactivo_sensores.html`](results/figuras/05_mapa_interactivo_sensores.html) —
 GitHub no ejecuta JavaScript en la vista previa, así que para explorarlo hay que descargarlo y abrirlo
 en el navegador, o correr esa celda del notebook.
 
-## 5. Decisión recomendada
+## 7. Decisión recomendada
 
 - **Pregunta real que responde el análisis:** no "¿cuánto tráfico hay en promedio por tipo de vía?"
   (esa pregunta casi no discrimina), sino **¿cuál es la probabilidad de que un corredor supere un
   nivel de congestión "Alto" en una franja horaria específica?**
-- **Recomendación:** iniciar el piloto de semaforización inteligente en **los 6 corredores por
-  igual, concentrado en las franjas 6:00-8:00 y 16:00-18:00** — no en un solo tipo de vía, porque los
-  datos no sustentan esa priorización. Si el presupuesto no alcanza para los 6 a la vez, empezar por
-  SEN04 y SEN06 (mayor conteo promedio).
-- **Costo de un Falso Positivo** (intervenir donde no hacía falta): gasto de infraestructura y
-  pérdida de credibilidad del piloto sin beneficio medible.
-- **Costo de un Falso Negativo** (no intervenir donde sí hacía falta): más tiempo de viaje,
-  emisiones y accidentalidad en una franja crítica — más costoso y menos reversible que el Falso
-  Positivo, por lo que preferimos un criterio conservador (cubrir los 6 corredores en horas pico en
-  vez de recortar a "los más prometedores").
-- **Limitación que persiste tras la limpieza:** solo 20 días de marzo y 6 sensores — no sabemos si el
-  patrón se mantiene en otros meses; y la variable de clima integrada del JSON solo cubre el 12% de
-  las lecturas, así que cualquier conclusión sobre el clima es preliminar.
-
-## 6. Cómo reproducir el análisis (solamente vía terminal)
-
-```bash
-# 1. Clonar el repositorio
-git clone https://github.com/santiagrueda/taller-practico-01-movilidad.git
-cd taller-practico-01-movilidad
-
-# 2. Crear entorno e instalar dependencias
-pip install -r requirements.txt
-
-# 3. Ejecutar el notebook de inicio a fin
-jupyter nbconvert --to notebook --execute --inplace notebooks/taller_practico_01_analisis.ipynb
-# o abrirlo interactivamente:
-jupyter notebook notebooks/taller_practico_01_analisis.ipynb
-```
-
-**Google Colab:** abran
-`https://colab.research.google.com/github/santiagrueda/taller-practico-01-movilidad/blob/main/notebooks/taller_practico_01_analisis.ipynb`.
-La primera celda del notebook detecta que está corriendo en Colab, clona el repositorio (URL ya
-configurada) y ajusta el directorio de trabajo antes de ejecutar el resto.
-
-## 7. Estructura del repositorio
-
-```
-.
-├── README.md
-├── requirements.txt
-├── data/
-│   ├── raw/                  # datos originales (sin modificar)
-│   └── processed/            # datos ya limpios, generados por el notebook
-├── notebooks/
-│   └── taller_practico_01_analisis.ipynb
-├── results/
-│   ├── figuras/
-│   └── tabla_diagnostico_gigo.csv
-├── taller_practico/
-│   ├── Taller_Practico_01.tex           # enunciado original
-│   ├── Taller_Practico_01.pdf           # enunciado original
-│   └── Taller_Practico_01_respuestas.md # respuestas Parte 1, 2 y 3
-└── docs/
-    └── declaracion_uso_IA.md
-```
+- **Recomendación:** iniciar el piloto de semaforización inteligente en **por lo menos 1 corredor de
+  cada tipo de vía (Local, Arteria, Troncal) monitoreado, concentrado en las franjas 6:00-8:00 y
+  16:00-18:00**. Se evidencia en las imágenes que las variables disponibles no muestran un
+  comportamiento relevante sobre el conteo de vehículos, a excepción de la franja horaria — por eso
+  el piloto debe permitir comparar tipos de vía entre sí bajo las mismas condiciones horarias, en vez
+  de concentrarse en un solo tipo o en los sensores de mayor volumen.
+- **Costo de un Falso Positivo** (ubicar semáforo donde no era necesario): desperdicio de presupuesto
+  de la Secretaría en un corredor que fluye bien naturalmente, causando posibles retrasos
+  innecesarios a los conductores.
+- **Costo de un Falso Negativo** (no ubicar el semáforo donde sí colapsa la vía): degradación
+  acelerada de la malla vial local (ej. SEN06), riesgo de accidentes por alta velocidad en vías
+  residenciales e insatisfacción ciudadana crónica por trancones.
+- **Limitación principal de los datos que persiste tras la limpieza:** solo 20 días de marzo y 6
+  sensores — no sabemos si el patrón se mantiene en otros meses; y la variable de clima integrada del
+  JSON solo cubre el 12% de las lecturas, así que cualquier conclusión sobre el clima es preliminar.
+  Además, desconocemos el tipo de vehículo (moto, auto, camión), lo que impide diseñar estrategias de
+  semaforización diferenciadas por carril.
 
 ## 8. Declaración de uso de Inteligencia Artificial
 
