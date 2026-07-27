@@ -36,4 +36,4 @@ el equipo.
 
 ## Herramienta y versión
 
-Claude (Anthropic), vía Claude Code, sesión del 24 de julio de 2026.
+Claude (Anthropic), vía Claude Code, sesiones entre el 24 y el 26 de julio de 2026.
