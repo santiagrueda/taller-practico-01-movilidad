@@ -9,6 +9,9 @@ el equipo.
 - **Sintaxis de pandas:** carga de archivos, `pd.json_normalize` para aplanar el JSON de clima,
   `groupby`/`transform` para imputación por sensor+hora, `merge_asof` para integrar el log de clima,
   `pd.crosstab` para la tabla de contingencia, y el código de las visualizaciones con matplotlib.
+- **Sintaxis de Plotly** para el mapa interactivo de sensores (`px.scatter_map` sobre OpenStreetMap);
+  la decisión de qué agregación mostrar (conteo promedio por sensor) y la interpretación geográfica
+  del resultado fueron del equipo.
 - **Diagnóstico inicial de calidad de datos (GIGO):** exploración programática del archivo
   contaminado (nulos, duplicados, categorías, formatos de fecha, rangos de valores, coordenadas)
   para identificar y cuantificar los 7 problemas documentados en la Tarea 2.

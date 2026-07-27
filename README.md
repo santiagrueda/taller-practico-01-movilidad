@@ -130,12 +130,29 @@ La proporción de tráfico "Alto" es parecida entre Soleado, Nublado y Lluvia �
 días el clima registrado no parece mover la aguja tanto como la hora del día. Lo dejamos como
 variable a seguir monitoreando (ver limitaciones), no como palanca de decisión.
 
-### 4.5 Los 6 sensores, ya en su lugar correcto
+### 4.5 Los 6 sensores, ya en su lugar correcto — y sobre el mapa real de Medellín
 
 ![Ubicación de sensores por tipo de vía](results/figuras/03_mapa_sensores.png)
 
 Tras corregir la georreferenciación, los 6 sensores quedan dentro del área urbana de Medellín (antes,
 SEN04 aparecía fuera del continente por la inversión de coordenadas).
+
+Como las coordenadas ya son reales y coherentes (verificado contra el archivo `_LIMPIO.csv` de
+referencia), las llevamos a un mapa interactivo sobre OpenStreetMap — el tamaño de cada punto es el
+conteo promedio de vehículos y el color es el tipo de vía:
+
+![Mapa interactivo de sensores en Medellín](results/figuras/05_mapa_interactivo_sensores.png)
+
+Los puntos caen exactamente sobre barrios reales de la ciudad: **SEN01** (Troncal) en
+Aranjuez/Castilla, **SEN04** (Troncal, el que tenía coordenadas invertidas) en Belén, **SEN02**
+(Arteria) en La Candelaria, **SEN03** (Local) en Laureles-Estadio, y **SEN05**/**SEN06**
+(Arteria/Local) cerca de El Poblado. Geográficamente sí hay una lógica de red vial distinta entre
+tipos de vía — los Troncales conectan corredores norte-sur estructurantes — aunque, como vimos en
+4.2, eso no se traduce en una diferencia grande de volumen promedio en estos 6 sensores durante este
+período. La versión interactiva completa (zoom, pan, hover con detalle por sensor) está en
+[`results/figuras/05_mapa_interactivo_sensores.html`](results/figuras/05_mapa_interactivo_sensores.html) —
+GitHub no ejecuta JavaScript en la vista previa, así que para explorarlo hay que descargarlo y abrirlo
+en el navegador, o correr esa celda del notebook.
 
 ## 5. Decisión recomendada
 
