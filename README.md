@@ -61,8 +61,8 @@ disponibles.
 
 ```bash
 # 1. Clonar el repositorio
-git clone <url-del-repo>
-cd <nombre-repo>
+git clone https://github.com/santiagrueda/taller-practico-01-movilidad.git
+cd taller-practico-01-movilidad
 
 # 2. Crear entorno e instalar dependencias
 pip install -r requirements.txt
@@ -73,21 +73,29 @@ jupyter nbconvert --to notebook --execute --inplace notebooks/taller_practico_01
 jupyter notebook notebooks/taller_practico_01_analisis.ipynb
 ```
 
-**Google Colab:** una vez el equipo haga `git push` a GitHub, abran
-`https://colab.research.google.com/github/<usuario>/<nombre-repo>/blob/main/notebooks/taller_practico_01_analisis.ipynb`.
+**Google Colab:** abran
+`https://colab.research.google.com/github/santiagrueda/taller-practico-01-movilidad/blob/main/notebooks/taller_practico_01_analisis.ipynb`.
 La primera celda del notebook detecta automáticamente que está corriendo en Colab, clona el
-repositorio y ajusta el directorio de trabajo — **solo deben reemplazar `REPO_URL` en esa celda**
-por la URL real del repositorio antes de ejecutar.
+repositorio (URL ya configurada) y ajusta el directorio de trabajo antes de ejecutar el resto.
 
 ## 5. Principales hallazgos
 
-| #   | Hallazgo | Evidencia (tabla/figura) |
-| --- | -------- | ------------------------ |
-| 1   | El tráfico tiene dos picos claros (6-8h y 16-18h), ~3x el volumen de las horas valle | `results/figuras/01_conteo_por_hora.png` |
-| 2   | El tipo de vía y el sensor individual casi no discriminan el volumen promedio de tráfico | `results/figuras/04_conteo_por_sensor.png` |
-| 3   | `conteo_vehiculos` está sesgado a la derecha (media 22.9 ≠ mediana 18) | `results/figuras/02_histograma_conteo.png` |
+**1. El tráfico tiene dos picos claros (6-8h y 16-18h), ~3x el volumen de las horas valle.**
 
-*(Ver notebook, sección Tarea 4, para el detalle cuantitativo y cualitativo completo)*
+![Conteo promedio de vehículos por hora del día](results/figuras/01_conteo_por_hora.png)
+
+**2. El tipo de vía y el sensor individual casi no discriminan el volumen promedio de tráfico** —
+la señal fuerte está en la hora del día, no en el corredor.
+
+![Conteo promedio de vehículos por sensor](results/figuras/04_conteo_por_sensor.png)
+
+**3. `conteo_vehiculos` está sesgado a la derecha (media 22.9 ≠ mediana 18)**, por lo que usamos
+mediana/IQR en vez de media/desviación estándar para resumirlo.
+
+![Distribución de conteo_vehiculos](results/figuras/02_histograma_conteo.png)
+
+*(Ver notebook, sección Tarea 4, para el detalle cuantitativo y cualitativo completo, incluyendo el
+mapa geoespacial de sensores en `results/figuras/03_mapa_sensores.png`)*
 
 ## 6. Problemas de calidad de datos encontrados (resumen GIGO)
 
