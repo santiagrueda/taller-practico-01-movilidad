@@ -9,9 +9,9 @@
 
 | Nombre completo | Cédula         |
 | ---------------- | -------------- |
-| [Nombre 1]      | [N° de cédula] |
-| [Nombre 2]      | [N° de cédula] |
-| [Nombre 3]      | [N° de cédula] |
+| Santiago Alberto Velez Casallas | [N° de cédula] |
+| Cristian Miguel Gomez Salazar   | [N° de cédula] |
+| Santiago Rueda Mira             | [N° de cédula] |
 
 ---
 
