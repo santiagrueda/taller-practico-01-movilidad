@@ -23,11 +23,11 @@ típicos de un proceso real: fechas en 5 formatos distintos, categorías de clim
 lecturas duplicadas, conteos imposibles (negativos o de 99.999 vehículos) y un sensor con
 coordenadas invertidas fuera de Medellín. Después de limpiarlo, la evidencia es clara: **el tráfico
 casi se triplica en dos franjas horarias (6-8 a.m. y 4-6 p.m.) sin importar el tipo de vía ni el
-corredor específico** — la variable que realmente importa es la hora, no el lugar. Por ello, recomendamos 
-iniciar el piloto en al menos un corredor de cada tipo de vía (Local, Arteria, Troncal) concentrado 
-estrictamenteen las franjas de 6:00-8:00 y 16:00-18:00. Esto permitirá comparar la efectividad del sistema
-entre los distintos tipos de vía bajo las mismas condiciones de estrés horario, optimizando el presupuesto
-en lugar de concentrarlo en un solo tipo de vía o en los sensores de mayor volumen.
+corredor específico** — la variable que realmente importa es la hora, no el lugar. 
+Por ello, recomendamos iniciar el piloto en al menos un corredor de cada tipo de vía (Local, Arteria, Troncal)
+concentrado estrictamente en las franjas de 6:00-8:00 y 16:00-18:00. Esto permitirá comparar la efectividad
+del sistema entre los distintos tipos de vía bajo las mismas condiciones de estrés horario, optimizando el
+presupuesto en lugar de concentrarlo en un solo tipo de vía o en los sensores de mayor volumen.
 
 ## 2. Pregunta de negocio
 
